@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.gallery{
+    background: #f2f2f2;
+}
+
+.contenedor-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    align-content: space-between;
+}
+
+.img-galeria{
+    border-radius: 3px;
+    width: 30%;
+    height: 13%;
+    margin-bottom: 15px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.imagen-light{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.534);
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.agregar-imagen{
+    width: 33%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    transform: scale(0);
+    border-radius: 10px;
+    transition: transform .3s .2s;
+}
+
+.showImage{
+    transform: scale(1);
+    z-index: 100;
+    position: fixed;
+}
+
+.show{
+    transform: translate(0);
+    z-index: 100;
+    position: fixed;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.icon{
+    position: absolute;
+    top: 15px;
+    left: 55px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.next{
+    position: absolute;
+    top: 275px;
+    right: 55px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.experts{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cont-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-expert img{
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.n-expert{
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 800px){
+    
+
+    .img-galeria{
+        width: 45%;
+        height: 20%;
+    }
+    
+    .agregar-imagen{
+    width: 55%;
+    }
+    
+}
+
+
+@media screen and (max-width: 500px){
+    
+    .img-galeria{
+        width: 95%;
+    }
+    
+    .agregar-imagen{
+        width: 90%;
+    }
+
+    
+}
